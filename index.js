@@ -33,3 +33,10 @@ app.use('/auth', AuthRoute)
 app.use('/user', UserRoute)
 app.use('/post', PostRoute)
 app.use('/upload', UploadRoute)
+
+
+// health check 
+
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+  });
